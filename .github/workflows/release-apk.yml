@@ -9,7 +9,7 @@ on:
       api_url:
         description: "URL de l'API à embarquer dans l'APK"
         required: false
-        default: "https://qr-events-api.khalilbenaz.workers.dev"
+        default: "https://qr-events-api.bmwmfcknzb.workers.dev"
 
 permissions:
   contents: write # créer la Release + y attacher l'APK
@@ -37,7 +37,7 @@ jobs:
 
       - name: Build release APK
         env:
-          API_URL: ${{ github.event.inputs.api_url || vars.MOBILE_API_URL || 'https://qr-events-api.khalilbenaz.workers.dev' }}
+          API_URL: ${{ github.event.inputs.api_url || vars.MOBILE_API_URL || 'https://qr-events-api.bmwmfcknzb.workers.dev' }}
         run: flutter build apk --release --dart-define=API_URL=$API_URL
 
       - name: Renommer l'APK
@@ -54,7 +54,7 @@ jobs:
 
             APK installable directement (hors store). Active « Sources inconnues » sur Android.
 
-            - API embarquée : `https://qr-events-api.khalilbenaz.workers.dev`
+            - API embarquée : `https://qr-events-api.bmwmfcknzb.workers.dev`
             - Connexion par **code d'accès porte** (créé dans le dashboard → onglet Scanners)
 
       - name: Artefact (déclenchement manuel)

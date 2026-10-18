@@ -8,7 +8,7 @@ Le projet est **déjà déployé**. Cette page documente l'état et comment repr
 | ----------------- | ------------------------------------------------------------------ |
 | **App** (web)     | **https://qr-events.pages.dev** — Cloudflare Pages                 |
 | Vitrine           | https://vantaflow.github.io/qr-events/ — GitHub Pages (statique) |
-| API (Worker)      | https://qr-events-api.khalilbenaz.workers.dev                      |
+| API (Worker)      | https://qr-events-api.bmwmfcknzb.workers.dev                      |
 | D1 database       | `qr-events` (`c49e10ec-…`)                                         |
 | KV namespace      | `CACHE` (`1de26c7d…`)                                              |
 | Compte Cloudflare | _(privé — voir `wrangler whoami`)_                                 |
@@ -50,7 +50,7 @@ cd web
 npm run deploy   # = npm run build + wrangler pages deploy dist --project-name qr-events
 ```
 
-Build avec `VITE_API_URL=https://qr-events-api.khalilbenaz.workers.dev` (base `/`).
+Build avec `VITE_API_URL=https://qr-events-api.bmwmfcknzb.workers.dev` (base `/`).
 L'origine `https://qr-events.pages.dev` est dans `ALLOWED_ORIGINS` de l'API.
 
 **Auto-déploiement (opt-in)** via [`deploy-cloudflare.yml`](../.github/workflows/deploy-cloudflare.yml) :
@@ -72,7 +72,7 @@ Présentation + liens vers l'app Cloudflare ; ne contient aucune logique applica
 ```bash
 cd mobile
 flutter build apk --release \
-  --dart-define=API_URL=https://qr-events-api.khalilbenaz.workers.dev
+  --dart-define=API_URL=https://qr-events-api.bmwmfcknzb.workers.dev
 # → build/app/outputs/flutter-apk/app-release.apk
 ```
 
