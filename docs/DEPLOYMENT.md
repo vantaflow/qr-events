@@ -7,12 +7,12 @@ Le projet est **déjà déployé**. Cette page documente l'état et comment repr
 | Élément           | Valeur                                                             |
 | ----------------- | ------------------------------------------------------------------ |
 | **App** (web)     | **https://qr-events.pages.dev** — Cloudflare Pages                 |
-| Vitrine           | https://khalilbenaz.github.io/qr-events/ — GitHub Pages (statique) |
+| Vitrine           | https://vantaflow.github.io/qr-events/ — GitHub Pages (statique) |
 | API (Worker)      | https://qr-events-api.khalilbenaz.workers.dev                      |
 | D1 database       | `qr-events` (`c49e10ec-…`)                                         |
 | KV namespace      | `CACHE` (`1de26c7d…`)                                              |
 | Compte Cloudflare | _(privé — voir `wrangler whoami`)_                                 |
-| Dépôt             | `khalilbenaz/qr-events` (public)                                   |
+| Dépôt             | `vantaflow/qr-events` (public)                                   |
 
 > ℹ️ **Répartition** : l'**application** (dashboard + pages publiques + scan) tourne sur
 > **Cloudflare Pages** (même plateforme que l'API). **GitHub Pages** n'héberge plus que la
@@ -38,7 +38,7 @@ npx wrangler deploy
 
 Variables (`wrangler.toml [vars]`) :
 
-- `ALLOWED_ORIGINS` — origines CORS autorisées (inclut `https://khalilbenaz.github.io`).
+- `ALLOWED_ORIGINS` — origines CORS autorisées (inclut `https://vantaflow.github.io`).
 - `PUBLIC_API_URL` — URL publique de l'API (liens QR).
 
 ## 2. App web — Cloudflare Pages
@@ -56,9 +56,9 @@ L'origine `https://qr-events.pages.dev` est dans `ALLOWED_ORIGINS` de l'API.
 **Auto-déploiement (opt-in)** via [`deploy-cloudflare.yml`](../.github/workflows/deploy-cloudflare.yml) :
 
 ```bash
-gh secret set CLOUDFLARE_API_TOKEN --repo khalilbenaz/qr-events   # token "Pages: Edit"
-gh secret set CLOUDFLARE_ACCOUNT_ID --repo khalilbenaz/qr-events --body 88ab66d1187457a9b98ccf75e1a4f0fd
-gh variable set CF_DEPLOY --repo khalilbenaz/qr-events --body true
+gh secret set CLOUDFLARE_API_TOKEN --repo vantaflow/qr-events   # token "Pages: Edit"
+gh secret set CLOUDFLARE_ACCOUNT_ID --repo vantaflow/qr-events --body 88ab66d1187457a9b98ccf75e1a4f0fd
+gh variable set CF_DEPLOY --repo vantaflow/qr-events --body true
 ```
 
 ## 3. Vitrine — GitHub Pages

@@ -2,8 +2,8 @@ name: Deploy app to Cloudflare Pages
 
 # Déploie l'application complète (web/) sur Cloudflare Pages.
 # Opt-in : nécessite le secret CLOUDFLARE_API_TOKEN + la variable CF_DEPLOY=true.
-#   gh secret set CLOUDFLARE_API_TOKEN --repo khalilbenaz/qr-events
-#   gh variable set CF_DEPLOY --repo khalilbenaz/qr-events --body true
+#   gh secret set CLOUDFLARE_API_TOKEN --repo vantaflow/qr-events
+#   gh variable set CF_DEPLOY --repo vantaflow/qr-events --body true
 # Sinon, déploiement manuel : `cd web && npm run deploy`.
 on:
   push:

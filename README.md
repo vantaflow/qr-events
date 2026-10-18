@@ -8,9 +8,9 @@ mobile de scan. Tout tient dans le **free tier Cloudflare**.
 | Service                                         | URL                                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------- |
 | 🚀 **App** (dashboard + pages publiques + scan) | **https://qr-events.pages.dev** (Cloudflare Pages)                                  |
-| 🪧 Vitrine (présentation)                       | https://khalilbenaz.github.io/qr-events/ (GitHub Pages)                             |
+| 🪧 Vitrine (présentation)                       | https://vantaflow.github.io/qr-events/ (GitHub Pages)                             |
 | ⚙️ API (Cloudflare Worker)                      | https://qr-events-api.khalilbenaz.workers.dev                                       |
-| 📱 Mobile (APK)                                 | [Dernière release GitHub](https://github.com/khalilbenaz/qr-events/releases/latest) |
+| 📱 Mobile (APK)                                 | [Dernière release GitHub](https://github.com/vantaflow/qr-events/releases/latest) |
 
 > 🧪 **Démo** — organisateur : `demo@qrevents.app` / `demo12345`.
 
